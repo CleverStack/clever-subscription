@@ -1,0 +1,57 @@
+{
+    "SubscriptionModel": [
+        {
+            "name" : "Trial",
+            "description": "This is a 30 days trial subscription",
+            "price" : 0.00,
+            "period": "30"
+        }
+    ],
+    "PermissionModel": [
+    	{
+    	    "action": "Subscription.list",
+    	    "description": "View subscriptions list.",
+    	    "associations": {
+    	        "AccountModel": [
+    	            { "name": "Default Account" }
+    	        ]
+    	    }
+    	},
+    	{
+    	    "action": "Subscription.view",
+    	    "description": "View a subscription.",
+    	    "associations": {
+    	        "AccountModel": [
+    	            { "name": "Default Account" }
+    	        ]
+    	    }
+    	},
+    	{
+    	    "action": "Subscription.create",
+    	    "description": "Create a subscription.",
+    	    "associations": {
+    	        "AccountModel": [
+    	            { "name": "Default Account" }
+    	        ]
+    	    }
+    	},
+    	{
+    	    "action": "Subscription.edit",
+    	    "description": "Edit a subscription.",
+    	    "associations": {
+    	        "AccountModel": [
+    	            { "name": "Default Account" }
+    	        ]
+    	    }
+    	},
+    	{
+    	    "action": "Subscription.delete",
+    	    "description": "Delete a subscription.",
+    	    "associations": {
+    	        "AccountModel": [
+    	            { "name": "Default Account" }
+    	        ]
+    	    }
+    	}
+    ]
+}

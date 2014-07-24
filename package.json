@@ -1,0 +1,46 @@
+{
+    "name": "clever-subscription",
+    "description": "CleverStack Subscription Module",
+    "version": "1.0.0",
+    "main": "module.js",
+    "author": {
+        "name": "CleverStack",
+        "email": "admin@cleverstack.io",
+        "web": "http://cleverstack.io"
+    },
+    "collaborators": [
+        "Richard Gustin <richard.gustin86@gmail.com>"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/CleverStack/clever-subscription.git"
+    },
+    "bugs": {
+        "url": "https://github.com/CleverStack/clever-subscription/issues"
+    },
+    "keywords": [
+        "cleverstack",
+        "cleverstack-module",
+        "cleverstack-backend",
+        "orm",
+        "backend",
+        "subscription",
+        "account"
+    ],
+    "license": "BSD-2-Clause",
+    "dependencies": {
+        
+    },
+    "devDependencies": {
+        "grunt": "~0.4.2",
+        "grunt-prompt": "~1.1.0"
+    },
+    "scripts": {
+        "test": "grunt test:unit"
+    },
+    "bundledDependencies": [
+        "clever-auth",
+        "clever-roles",
+        "clever-background-tasks"
+    ]
+}

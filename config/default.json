@@ -1,0 +1,27 @@
+{
+    "clever-subscription": {
+        "driver": "ORM"
+    },
+    "clever-orm": {
+        "modelAssociations": {
+            "Account": {
+                "belongsTo": [
+                    "Subscription"
+                ]
+            },
+            "Subscription": {
+                "belongsTo": [
+                    "User"
+                ],
+                "hasMany": [
+                    "Account"
+                ]
+            },
+            "User": {
+                "hasOne": [
+                    "Subscription"
+                ]
+            }
+        }
+    }
+}
