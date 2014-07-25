@@ -1,7 +1,13 @@
 {
     "SubscriptionModel": [
         {
-            "name" : "Trial",
+            "name" : "Trial Package for Default Account",
+            "description": "This is a 30 days trial subscription",
+            "price" : 0.00,
+            "period": "30"
+        },
+        {
+            "name" : "Trial Package",
             "description": "This is a 30 days trial subscription",
             "price" : 0.00,
             "period": "30"
