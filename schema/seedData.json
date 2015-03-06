@@ -1,63 +1,32 @@
 {
-    "SubscriptionModel": [
-        {
-            "name" : "Trial Package for Default Account",
-            "description": "This is a 30 days trial subscription",
-            "price" : 0.00,
-            "period": "30"
-        },
-        {
-            "name" : "Trial Package",
-            "description": "This is a 30 days trial subscription",
-            "price" : 0.00,
-            "period": "30"
-        }
-    ],
-    "PermissionModel": [
-    	{
-    	    "action": "Subscription.list",
-    	    "description": "View subscriptions list.",
-    	    "associations": {
-    	        "AccountModel": [
-    	            { "name": "Default Account" }
-    	        ]
-    	    }
-    	},
-    	{
-    	    "action": "Subscription.view",
-    	    "description": "View a subscription.",
-    	    "associations": {
-    	        "AccountModel": [
-    	            { "name": "Default Account" }
-    	        ]
-    	    }
-    	},
-    	{
-    	    "action": "Subscription.create",
-    	    "description": "Create a subscription.",
-    	    "associations": {
-    	        "AccountModel": [
-    	            { "name": "Default Account" }
-    	        ]
-    	    }
-    	},
-    	{
-    	    "action": "Subscription.edit",
-    	    "description": "Edit a subscription.",
-    	    "associations": {
-    	        "AccountModel": [
-    	            { "name": "Default Account" }
-    	        ]
-    	    }
-    	},
-    	{
-    	    "action": "Subscription.delete",
-    	    "description": "Delete a subscription.",
-    	    "associations": {
-    	        "AccountModel": [
-    	            { "name": "Default Account" }
-    	        ]
-    	    }
-    	}
-    ]
+  "SubscriptionModel": [
+    {
+      "name"        : "Trial Package",
+      "description" : "This is a 30 days trial subscription",
+      "price"       : 0.00,
+      "period"      : "30"
+    }
+  ],
+  "PermissionModel": [
+    {
+      "action"      : "Subscription.list",
+      "description" : "View subscriptions list."
+    },
+    {
+      "action"      : "Subscription.view",
+      "description" : "View a subscription."
+    },
+    {
+      "action"      : "Subscription.create",
+      "description" : "Create a subscription."
+    },
+    {
+      "action"      : "Subscription.edit",
+      "description" : "Edit a subscription."
+    },
+    {
+      "action"      : "Subscription.delete",
+      "description" : "Delete a subscription."
+    }
+  ]
 }

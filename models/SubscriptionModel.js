@@ -1,39 +1,53 @@
-module.exports = function ( Model, config ) {
-    return Model.extend( 'Subscription',
-    {
-        type: 'ORM',
-        softDeletable: true,
-        timeStampable: true
+module.exports = function ( Model, Promise, moment, config ) {
+  return Model.extend( 'Subscription',
+  {
+    type                : config[ 'clever-subscription' ].driver,
+    softDeletable       : true,
+    timeStampable       : true
+  },
+  {
+    id: {
+      type            : Number,
+      primaryKey      : true,
+      autoIncrement   : true
     },
-    {
-        id: {
-            type: Number,
-            primaryKey: true,
-            autoIncrement: true
-        },
-        lastBillingDate: {
-            type: Date,
-            allowNull: true,
-            default: null
-        },
-        name: {
-            type: String,
-            validate: {
-                len: [ 2, 32 ]
-            }
-        },
-        description: {
-            type: String,
-            validate: {
-                len: [ 10, 100 ]
-            }
-        },
-        price: Model.Types.DECIMAL(10, 2),
-        period: {
-            type: String,
-            validate: {
-                len: [ 1, 20 ]
-            }
-        }
-    });
+    name: {
+      type            : String,
+      validate: {
+        len         : [ 2, 32 ]
+      }
+    },
+    description: {
+      type            : String,
+      validate: {
+        len         : [ 2, 255 ]
+      }
+    },
+    billingInterval: {
+      type            : Number,
+      allowNull       : true,
+      default         : null,
+      validate: {
+        min: 1,
+        max: 30
+      }
+    },
+    billingFrequency: {
+      type            : String,
+      allowNull       : true,
+      default         : null,
+      validate: {
+        in: [ 'Days', 'Weeks', 'Months', 'Years' ]
+      }
+    },
+    isTrial: {
+      type            : Boolean,
+      default         : false
+    },
+    price               : Model.Types.DECIMAL( 10, 2 ),
+    active: {
+      type            : Boolean,
+      default         : true
+    }
+  });
 };
